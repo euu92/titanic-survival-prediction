@@ -20,13 +20,13 @@ Mi proceso se dividió en 6 fases clave, documentadas en el notebook `titanic-an
 
 ### 3. Ingeniería de Características (El Trabajo de "Detective")
 Esta fue la fase más crítica. Creé varias características nuevas para mejorar la precisión del modelo:
-* `**Family_Size`: Combinando `SibSp` y `Parch`.
-* `**Family_Size_Grouped`: Agrupando `Family_Size` en categorías útiles ('Alone', 'Small', 'Medium', 'Large').
-* `**Age_Cut`: Binarizando la columna `Age` en 8 grupos basados en `pd.qcut()`.
-* `**Fare_Cut`: Binarizando la columna `Fare` (muy sesgada) en 6 grupos.
-* `**Title`: Extraído de la columna `Name` (ej. 'Mr', 'Mrs', 'Master') y agrupando títulos raros ('Military', 'Noble').
-* `**TicketNumberCounts`: Calculando cuántos pasajeros compartían el mismo número de ticket.
-* `**Cabin_Assigned`: Una característica binaria (1 o 0) que indica si un pasajero tenía una `Cabin` asignada o era 'U' (Desconocido).
+* `Family_Size`: Combinando `SibSp` y `Parch`.
+* `Family_Size_Grouped`: Agrupando `Family_Size` en categorías útiles ('Alone', 'Small', 'Medium', 'Large').
+* `Age_Cut`: Binarizando la columna `Age` en 8 grupos basados en `pd.qcut()`.
+* `Fare_Cut`: Binarizando la columna `Fare` (muy sesgada) en 6 grupos.
+* `Title`: Extraído de la columna `Name` (ej. 'Mr', 'Mrs', 'Master') y agrupando títulos raros ('Military', 'Noble').
+* `TicketNumberCounts`: Calculando cuántos pasajeros compartían el mismo número de ticket.
+* `Cabin_Assigned`: Una característica binaria (1 o 0) que indica si un pasajero tenía una `Cabin` asignada o era 'U' (Desconocido).
 
 ### 4. Preprocesamiento (La Pipeline)
 * **Limpieza Final:** Rellené los últimos valores nulos (ej. `Embarked` con la moda 'S', `Fare` con la mediana).
